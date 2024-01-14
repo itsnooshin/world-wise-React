@@ -6,7 +6,6 @@ import Homepage from './pages/Homepage';
 import PageNotFound from './pages/PageNotFound';
 import AppLayout from './pages/AppLayout';
 import CityList from './components/CityList';
-import { useState, useEffect } from 'react';
 import CountryList from './components/CountryList';
 import City from './components/City';
 import Form from './components/Form';
@@ -22,10 +21,6 @@ function App() {
           <Route path="product" element={<Product />} />
           <Route path="/login" element={<Login />} />
           <Route path="app" element={<AppLayout />}>
-            {/* <Route
-            index
-            element={<CityList isLoading={isLoading} cities={cities} />}
-          /> */}
             <Route index element={<Navigate replace to="cities" />} />
             <Route path="cities" element={<CityList />} />
             <Route path="cities/:id" element={<City />} />
@@ -35,7 +30,7 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
-    </CitiesProvider>
+    </CitiesProvider>  
   );
 }
 

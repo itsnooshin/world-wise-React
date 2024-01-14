@@ -5,9 +5,8 @@ import Message from './Message';
 import { useContext } from 'react';
 import { CitiesContext } from '../Contexts/CitiesContext';
 
-
 function CountryList() {
-  const {cities, isLoading} = useContext(CitiesContext)
+  const { cities, isLoading } = useContext(CitiesContext);
   if (isLoading) {
     return <Spinner />;
   }
