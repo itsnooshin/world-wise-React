@@ -10,6 +10,13 @@ Worldwise is a dynamic Single Page Application (SPA) designed for geography enth
 - City and Country Lists: Users can view and manage a list of cities and countries, adding to their personal collection.
 - Add Cities: An innovative feature allows users to add new cities directly from the map, using an integrated form.
 
+## Screenshots
+
+
+https://github.com/itsnooshin/world-wise-React/assets/93255365/5c357e87-ab5b-4c2b-a58e-b47371699942
+
+
+
 ## Usage
 
 Run `npm install` or `bun install` to install all needed dependencies.
