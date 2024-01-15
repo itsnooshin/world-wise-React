@@ -1,9 +1,39 @@
-# React + Vite
+# World Wise with React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Worldwise is a dynamic Single Page Application (SPA) designed for geography enthusiasts and travelers. It offers an immersive experience in exploring global cities and countries.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# world-wise-React
+
+
+## Features
+
+- Interactive Map: Users can interact with a world map to discover new locations.
+- City Information: Clicking on a city reveals detailed information, enhancing users' geographical knowledge.
+- User Accounts: With user login functionality, the application provides a personalized experience.
+- City and Country Lists: Users can view and manage a list of cities and countries, adding to their personal collection.
+- Add Cities: An innovative feature allows users to add new cities directly from the map, using an integrated form.
+
+
+Run `npm install` or `bun install` to install all needed dependencies.
+```
+$ npm install
+```
+
+The API is simulated by a JSON file in the data folder running on json-server. The --delay flag is set to 500 milliseconds to simulate latency so the loading components have time to render. This can be changed inside package.json.
+```
+$ npm run server
+
+# on another terminal instance
+$ npm run dev 
+```
+
+## Built with
+
+- state management (context API + useReducer ,memo, useMemo, useCallback)
+- JavaScript  / React js
+- Packeges(Date Picker , leaflet , React router)
+- CSS modules
+- use FAKE API
+- Custom hook
+
+
