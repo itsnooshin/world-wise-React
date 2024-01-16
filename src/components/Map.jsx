@@ -1,4 +1,4 @@
-import { useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import styles from './Map.module.css';
 import {
   MapContainer,
@@ -10,7 +10,6 @@ import {
 } from 'react-leaflet';
 import { useEffect, useState } from 'react';
 import { useCities } from '../Contexts/CitiesContext';
-import { latLng } from 'leaflet';
 import { useGeolocation } from '../hooks/useGeolocation';
 import Button from './Button';
 import { useUrlPosition } from '../hooks/useUrlPosition';
@@ -23,9 +22,9 @@ function Map() {
     position: geoLocationPosition,
     getPosition,
   } = useGeolocation();
-
   const [mapLat, mapLng] = useUrlPosition();
 
+  //
   useEffect(() => {
     if (geoLocationPosition)
       setPosition([geoLocationPosition.lat, geoLocationPosition.lng]);
@@ -71,6 +70,7 @@ function Map() {
 
 function ChangeCenter({ position }) {
   const map = useMap(); // hook
+  console.log(map);
   map.setView(position);
   return null;
 }

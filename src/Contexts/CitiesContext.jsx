@@ -95,7 +95,7 @@ function CitiesProvider({ children }) {
     } catch (error) {
       dispatch({
         type: 'rejected',
-        playLoad: 'There was an error loading cities...',
+        playLoad: 'There was an error Creating cities...',
       });
     }
   }
@@ -133,7 +133,7 @@ function CitiesProvider({ children }) {
 }
 function useCities() {
   const context = useContext(CitiesContext);
-  if (context === undefined) throw new Error('This is a error');
+  if (context === undefined) throw new Error('This is a no context...');
   return context;
 }
 

@@ -12,6 +12,7 @@ const formatDate = (date) =>
     weekday: 'long',
   }).format(new Date(date));
 
+
 function City() {
   const { id } = useParams();
 
@@ -21,6 +22,7 @@ function City() {
     getCity(id);
   }, [id]);
 
+  
   //data should be load and then
   const { cityName, emoji, date, notes } = currentCity;
 
