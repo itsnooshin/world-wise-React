@@ -8,6 +8,13 @@ const initalState = {
   isAuthenticated: false,
 };
 
+const FAKE_USER = {
+    name: 'Jack',
+    email: 'jack@example.com',
+    password: 'qwerty',
+    avatar: 'https://i.pravatar.cc/100?u=zz',
+  };
+
 function reducer(state, action) {
   switch (action.type) {
     case 'login':
@@ -19,14 +26,9 @@ function reducer(state, action) {
   }
 }
 
-const FAKE_USER = {
-  name: 'Jack',
-  email: 'jack@example.com',
-  password: 'qwerty',
-  avatar: 'https://i.pravatar.cc/100?u=zz',
-};
 
-function CustomProvider({ children }) {
+
+function AuthProvider({ children }) {
   const [{ user, isAuthenticated }, dispatch] = useReducer(
     reducer,
     initalState
@@ -48,7 +50,10 @@ function CustomProvider({ children }) {
 
 function useAuth() {
   const context = useContext(AuthContext);
+  console.log(context);
   if (context === undefined) throw new Error('There');
+
+  return context;
 }
 
-export { useAuth, CustomProvider };
+export { useAuth, AuthProvider };
