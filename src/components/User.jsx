@@ -5,7 +5,6 @@ import styles from './User.module.css';
 function User() {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  console.log(user);
 
   function handleClick() {
     logout();

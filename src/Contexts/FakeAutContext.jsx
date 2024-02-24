@@ -50,9 +50,7 @@ function AuthProvider({ children }) {
 
 function useAuth() {
   const context = useContext(AuthContext);
-  console.log(context);
   if (context === undefined) throw new Error('There');
-
   return context;
 }
 
