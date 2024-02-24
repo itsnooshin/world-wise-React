@@ -11,7 +11,7 @@ import City from './components/City';
 import Form from './components/Form';
 import { CitiesProvider } from './Contexts/CitiesContext';
 import { AuthProvider } from './Contexts/FakeAutContext';
-import ProtectedRoute from './pages/protectedRoute';
+import ProtectedRoute from './pages/ProtectedRoute.jsx';
 
 function App() {
   return (
